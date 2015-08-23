@@ -1,1 +1,3 @@
-new AppView().$el.appendTo('body');
+var app = new AppView({
+  collection: Queues
+});
