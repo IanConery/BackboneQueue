@@ -10,9 +10,7 @@ var Queues = Backbone.Collection.extend({
 
   removeQueueItem: function(model){
     var found = this.get(model);
-    console.log(found);
     this.remove(found);
-    console.log(this.models);
   }
 
 });

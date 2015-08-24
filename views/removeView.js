@@ -2,7 +2,6 @@ var RemoveView = Backbone.View.extend({
 
   tagName: 'button',
   id: 'remove',
-  // template: _.template('<button id="remove">Remove from Queue</button>'),
 
   events: {
     'click': 'removeItem'
