@@ -9,6 +9,10 @@ var AppView = Backbone.View.extend({
       collection: this.collection
     });
 
+    this.removeQueueItem = new RemoveView({
+      collection: this.collection
+    });
+
     this.queueList = new QueueListView({
       collection: this.collection
     }); 
@@ -19,7 +23,8 @@ var AppView = Backbone.View.extend({
 
     this.$el.append([
       this.title, 
-      this.input.$el, 
+      this.input.$el,
+      this.removeQueueItem.$el, 
       this.queueList.$el
     ]);
     return this; 

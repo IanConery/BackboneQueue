@@ -4,7 +4,7 @@ var QueueListView = Backbone.View.extend({
   className: 'container',
 
   initialize: function(){
-    this.listenTo(this.collection, 'add', this.render);
+    this.listenTo(this.collection, 'add remove', this.render);
     this.render();
   },
 

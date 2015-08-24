@@ -6,6 +6,13 @@ var Queues = Backbone.Collection.extend({
     this.add({
       name: name
     });
+  },
+
+  removeQueueItem: function(model){
+    var found = this.get(model);
+    console.log(found);
+    this.remove(found);
+    console.log(this.models);
   }
 
 });
