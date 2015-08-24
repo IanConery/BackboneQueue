@@ -1,3 +1,3 @@
-var app = new AppView({
+new AppView({
   collection: Queues
 });

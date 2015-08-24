@@ -1,6 +1,8 @@
 var InputView = Backbone.View.extend({
 
   tagName: 'input',
+  id: 'input',
+  className: 'text-center',
 
   events: {
     'keydown': 'addItem'
@@ -17,16 +19,15 @@ var InputView = Backbone.View.extend({
 
   addItem: function(e){
     if(e.which === 13){
-      this.collection.add({
-        name: this.$el.val()
-      });
+
+      this.collection.addQueueItem(this.$el.val());
       this.reset();
     }
   },
 
   reset: function(){
     this.$el.attr({
-      placeHolder: 'Name your new queue item'
+      placeHolder: 'Add to the Queue'
     });
     this.$el.val('');
   }

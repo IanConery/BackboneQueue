@@ -13,6 +13,7 @@ var QueueView = Backbone.View.extend({
     });
     
     this.$el.html(queueItem);
+    return this;
   }
 
 });

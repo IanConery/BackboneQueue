@@ -3,7 +3,7 @@ var AppView = Backbone.View.extend({
   el: '#main-container',
   
   initialize: function(){
-    this.title = _.template('<div class="container"><h2>Backbone Queue Visualization</h2></div>');
+    this.title = _.template('<h2 class="text-center">Queue Visualization using Backbone.js</h2>');
     
     this.input = new InputView({
       collection: this.collection
@@ -16,12 +16,13 @@ var AppView = Backbone.View.extend({
   },
 
   render: function(){
+
     this.$el.append([
       this.title, 
-      this.input, 
-      this.queueList
+      this.input.$el, 
+      this.queueList.$el
     ]);
-    return this;
+    return this; 
   }
 
 });
