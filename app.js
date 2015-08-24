@@ -1,3 +1,3 @@
 new AppView({
-  collection: Queues
+  collection: new Queues()
 });

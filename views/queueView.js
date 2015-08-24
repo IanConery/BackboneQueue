@@ -1,6 +1,6 @@
 var QueueView = Backbone.View.extend({
 
-  template: _.template('<p><%-name%></p>'),
+  template: _.template('<div class="singleQueue text-center"><%-name%></div>'),
 
   initialize: function(){
     this.listenTo(this.model, 'change', this.render);
@@ -11,9 +11,8 @@ var QueueView = Backbone.View.extend({
     var queueItem = this.template({
       name: this.model.get('name')
     });
-    
     this.$el.html(queueItem);
-    return this;
+    this.$el.appendTo('#list-view');
   }
 
 });
